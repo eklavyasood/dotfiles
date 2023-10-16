@@ -6,7 +6,7 @@
 hyprland setup for the wayland bling
 
 ** applications:
-- [[https://github.com/alacritty/alacritty[alacritty]]
+- [[https://github.com/alacritty/alacritty][alacritty]]
 - dunst
 - hyprland (duh)
 - neovim
