@@ -5,7 +5,7 @@
 
 hyprland setup for the wayland bling
 
-** applications:
+** applications
 - [[https://github.com/alacritty/alacritty][alacritty]]
 - [[https://github.com/dunst-project/dunst][dunst]]
 - [[https://github.com/hyprwm/Hyprland][hyprland]]
