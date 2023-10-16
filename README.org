@@ -7,18 +7,17 @@ hyprland setup for the wayland bling
 
 ** applications:
 - [[https://github.com/alacritty/alacritty][alacritty]]
-- dunst
-- hyprland (duh)
-- neovim
-- ranger
-- rofi
-- starship
-- swappy
-- swaylock
-- vim
-- wal
-- waybar
-- wlogout
+- [[https://github.com/dunst-project/dunst][dunst]]
+- [[https://github.com/hyprwm/Hyprland][hyprland]]
+- [[https://github.com/neovim/neovim][neovim]]
+- [[https://github.com/davatorium/rofi][rofi]]
+- [[https://github.com/starship/starship][starship]]
+- [[https://github.com/jtheoof/swappy][swappy]]
+- [[https://github.com/swaywm/swaylock][swaylock]]
+- [[https://github.com/vim/vim][vim]]
+- [[https://github.com/dylanaraps/pywal][pywal]]
+- [[https://github.com/Alexays/Waybar][waybar]]
+- [[waylock][wlogout]]
 
 ** recent screenshot
 
