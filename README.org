@@ -1,0 +1,25 @@
+#+title: hypr-dotfiles
+#+author: wolfinthedepths
+
+* hyprland dotfiles
+
+hyprland setup for the wayland bling
+
+** applications:
+- alacritty
+- dunst
+- hyprland (duh)
+- neovim
+- ranger
+- rofi
+- starship
+- swappy
+- swaylock
+- vim
+- wal
+- waybar
+- wlogout
+
+** recent screenshot
+
+[[./screenshots/screenshot.png]]
