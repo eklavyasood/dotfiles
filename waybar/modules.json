@@ -178,7 +178,7 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%d-%M-%Y}"
     },
 
     // CPU
@@ -232,8 +232,8 @@
 
     // Pulseaudio
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
+        "scroll-step": 5,
+        "format": "{icon}  {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -254,7 +254,7 @@
     // Spotify
     "custom/spotify": {
         "format": "{} ",
-        "max-length": 45,
+        "max-length": 50,
         "exec": "/usr/bin/python3 /home/wolf/dotfiles/scripts/mediaplayer.py --player spotify",
         "return-type": "json",
         "on-click": "playerctl play-pause",
