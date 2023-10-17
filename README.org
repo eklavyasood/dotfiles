@@ -19,9 +19,14 @@ hyprland setup for the wayland bling
 - [[https://github.com/Alexays/Waybar][waybar]]
 - [[waylock][wlogout]]
 
-** recent screenshot
+** screenshots
 
 [[./screenshots/screenshot.png]]
-
+[[./screenshots/screenshot-20231017-232236.png]]
+[[./screenshots/screenshot-20231017-232255.png]]
+[[./screenshots/screenshot-20231017-232306.png]]
+[[./screenshots/screenshot-20231017-232316.png]]
+[[./screenshots/screenshot-20231017-232328.png]]
+[[]]
 ** note for running script
 clone the repo to ~/ and rename the directory to 'dotfiles'
