@@ -22,3 +22,6 @@ hyprland setup for the wayland bling
 ** recent screenshot
 
 [[./screenshots/screenshot.png]]
+
+** note for running script
+clone the repo to ~/ and rename the directory to 'dotfiles'
