@@ -27,6 +27,6 @@ hyprland setup for the wayland bling
 [[./screenshots/screenshot-20231017-232306.png]]
 [[./screenshots/screenshot-20231017-232316.png]]
 [[./screenshots/screenshot-20231017-232328.png]]
-[[]]
+
 ** note for running script
 clone the repo to ~/ and rename the directory to 'dotfiles'
