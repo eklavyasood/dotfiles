@@ -29,4 +29,5 @@ hyprland setup for the wayland bling
 [[./screenshots/screenshot-20231017-232328.png]]
 
 ** note for running script
-clone the repo to ~/ and rename the directory to 'dotfiles'
+- clone the repo to ~/ and rename the directory to 'dotfiles'
+- remember to restore packages from desktop to preinstall them to the target system
