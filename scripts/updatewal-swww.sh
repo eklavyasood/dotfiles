@@ -12,7 +12,7 @@
 # ----------------------------------------------------- 
 # Select random wallpaper and create color scheme
 # ----------------------------------------------------- 
-wal -q -i ~/wallpaper/
+wal -q -i ~/hypr-wallpapers/
 
 # ----------------------------------------------------- 
 # Load current pywal color scheme

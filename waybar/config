@@ -32,10 +32,11 @@
 
     // Modules Left
     "modules-left": [
-        "custom/spotify",
+        "tray",
+        "hyprland/window",
+        "custom/spotify"
     //    "custom/appmenu",
     //    "wlr/taskbar",
-        "hyprland/window"
     ],
 
     // Modules Center
@@ -45,17 +46,17 @@
 
     // Modules Right    
     "modules-right": [
-        "custom/updates",
+        "battery",
         "custom/wallpaper",
         "group/quicklinks",
         "pulseaudio",
     //    "custom/updates",
-    //    "bluetooth",
+        "bluetooth",
     //    "battery", 
         "group/hardware",
     //   "custom/cliphist",
-    //   "network",
-        "custom/exit",
+        "network",
+    //  "custom/exit",
         "clock",
     ],
 

@@ -808,7 +808,6 @@ xorgproto
 xvidcore
 xz
 yarn
-yay-git
 zeromq
 zimg
 zlib
