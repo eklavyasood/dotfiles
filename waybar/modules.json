@@ -56,15 +56,6 @@
         "separate-outputs": true,
     },
 
-    // Youtube Subscriber Count
-    "custom/youtube": {
-        "format": " {}",
-        "exec": "python ~/private/youtube.py",
-        "restart-interval": 600,
-        "on-click": "brave https://studio.youtube.com",
-        "tooltip": false
-    },
-    
     // Cliphist
     "custom/cliphist": {
         "format": "",
@@ -98,27 +89,6 @@
     "custom/filemanager": {
         "format": "",
         "on-click": "~/dotfiles/scripts/filemanager.sh",
-        "tooltip": false
-    },
-
-    // Outlook Launcher
-    "custom/outlook": {
-        "format": "",
-        "on-click": "brave --app=https://outlook.office.com/mail/",
-        "tooltip": false
-    },
-
-    // Teams Launcher
-    "custom/teams": {
-        "format": "",
-        "on-click": "chromium --app=https://teams.microsoft.com/go",
-        "tooltip": false
-    },
-
-    // Brave Launcher
-    "custom/brave": {
-        "format": "",
-        "on-click": "brave",
         "tooltip": false
     },
 

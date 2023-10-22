@@ -41,7 +41,7 @@
 
     // Modules Center
     "modules-center": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
     ],
 
     // Modules Right    
@@ -52,7 +52,6 @@
         "pulseaudio",
     //    "custom/updates",
         "bluetooth",
-    //    "battery", 
         "group/hardware",
     //   "custom/cliphist",
         "network",
