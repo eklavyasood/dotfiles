@@ -51,19 +51,19 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 1px 9px;
+    padding: 3px 9px 1px 9px;
     margin: 3px 3px;
     border-radius: 15px;
     border:0px;
-    color: #FFFFFF;
+    color: #ffffff;
     background-color: @color11;
     transition: all 0.3s ease-in-out;
-    opacity:0.4;
+    opacity:0.8;
 }
 
 #workspaces button.active {
-    color: #FFFFFF;
-    background: @color11;
+    color: #ffffff;
+    background-color: @color11;
     border-radius: 15px;
     min-width: 40px;
     transition: all 0.3s ease-in-out;
