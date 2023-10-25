@@ -20,7 +20,7 @@ if [ "$selected" ]; then
     # ----------------------------------------------------- 
     # Update wallpaper with pywal
     # ----------------------------------------------------- 
-    wal -q -i ~/wallpaper/$selected
+    wal -q -i ~/hypr-wallpapers/$selected
 
     # ----------------------------------------------------- 
     # Get new theme
