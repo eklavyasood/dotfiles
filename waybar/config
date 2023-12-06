@@ -32,10 +32,11 @@
 
     // Modules Left
     "modules-left": [
+        "tray",
         "custom/spotify",
+        "hyprland/window"
     //    "custom/appmenu",
     //    "wlr/taskbar",
-        "hyprland/window"
     ],
 
     // Modules Center
