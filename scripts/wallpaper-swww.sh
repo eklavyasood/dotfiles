@@ -12,7 +12,7 @@
 # -----------------------------------------------------
 # Select wallpaper
 # -----------------------------------------------------
-selected=$(ls -1 ~/hypr-wallpapers/ | rofi -dmenu -config ~/dotfiles/rofi/config-wallpaper.rasi -p "Wallpapers")
+selected=$(ls -1 ~/hypr-wallpapers | rofi -dmenu -config ~/dotfiles/rofi/config-wallpaper.rasi -p "Wallpapers")
 
 if [ "$selected" ]; then
 
@@ -20,7 +20,7 @@ if [ "$selected" ]; then
 	# -----------------------------------------------------
 	# Update wallpaper with pywal
 	# -----------------------------------------------------
-	wal -q -i ~/wallpaper/$selected
+	wal -q -i ~/hypr-wallpapers/$selected
 
 	# -----------------------------------------------------
 	# Get new theme
