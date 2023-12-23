@@ -141,9 +141,9 @@
   },
   // Clock
   "clock": {
-    // "timezone": "America/New_York",
+    "timezone": "Asia/Kolkata",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%d-%M-%Y}"
+    "format-alt": "{:%d-%m-%Y}"
   },
   // CPU
   "cpu": {
@@ -160,7 +160,7 @@
     "interval": 30,
     "format": " {percentage_used}% ",
     "path": "/",
-    "on-click": "alacritty -e htop"
+    "on-click": "kitty -e htop"
   },
   // Network
   "network": {
