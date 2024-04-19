@@ -1,0 +1,246 @@
+//  __  __           _       _            
+// |  \/  | ___   __| |_   _| | ___  ___  
+// | |\/| |/ _ \ / _` | | | | |/ _ \/ __| 
+// | |  | | (_) | (_| | |_| | |  __/\__ \ 
+// |_|  |_|\___/ \__,_|\__,_|_|\___||___/ 
+//                                        
+//  
+// 
+// ----------------------------------------------------- 
+//
+{
+  // Workspaces
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "active-only": false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "",
+      "urgent": "",
+      "default": ""
+    },
+    "persistent_workspaces": {
+      "*": 0
+    }
+  },
+  // Taskbar
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+      "Alacritty"
+    ],
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition"
+    },
+    "rewrite": {
+      "Firefox Web Browser": "Firefox",
+      "Foot Server": "Terminal"
+    }
+  },
+  // Hyprland Window
+  "hyprland/window": {
+    "rewrite": {
+      "(.*) - Brave": "$1",
+      "(.*) - Chromium": "$1",
+      "(.*) - Brave Search": "$1",
+      "(.*) - Outlook": "$1",
+      "(.*) Microsoft Teams": "$1"
+    },
+    "separate-outputs": true,
+  },
+  // Cliphist
+  "custom/cliphist": {
+    "format": "",
+    "on-click": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh",
+    "on-click-right": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh d",
+    "on-click-middle": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh w",
+    "tooltip": false
+  },
+  // Updates Count
+  "custom/updates": {
+    "format": "  {}",
+    "tooltip-format": "{}",
+    "escape": true,
+    "return-type": "json",
+    "exec": "~/dotfiles/scripts/updates.sh",
+    "restart-interval": 60,
+    "on-click": "alacritty -e ~/dotfiles/scripts/installupdates.sh",
+    "tooltip": false
+  },
+  // Wallpaper
+  "custom/wallpaper": {
+    "format": "",
+    "on-click-right": "~/dotfiles/scripts/wallpaper-swww.sh",
+    "on-click": "~/dotfiles/scripts/updatewal-swww.sh",
+    "tooltip": false
+  },
+  // Filemanager Launcher
+  "custom/filemanager": {
+    "format": "",
+    "on-click": "~/dotfiles/scripts/filemanager.sh",
+    "tooltip": false
+  },
+  // ChatGPT Launcher
+  "custom/chatgpt": {
+    "format": "",
+    "on-click": "brave --app=https://chat.openai.com",
+    "tooltip": false
+  },
+  // Rofi Calculator
+  "custom/calculator": {
+    "format": "",
+    "on-click": "~/dotfiles/scripts/calculator.sh",
+    "tooltip": false
+  },
+  // Windows VM
+  "custom/windowsvm": {
+    "format": "",
+    "on-click": "~/private/launchvm.sh",
+    "tooltip": false
+  },
+  // Rofi Application Launcher
+  "custom/appmenu": {
+    "format": "Apps",
+    "on-click": "~/dotfiles/scripts/applauncher.sh",
+    "tooltip": false
+  },
+  // Power Menu
+  "custom/exit": {
+    "format": "",
+    "on-click": "wlogout",
+    "tooltip": false
+  },
+  // Keyboard State
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
+  },
+  // System tray
+  "tray": {
+    // "icon-size": 21,
+    "spacing": 10
+  },
+  // Clock
+  "clock": {
+    "timezone": "Asia/Kolkata",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%d-%m-%Y}"
+  },
+  // CPU
+  "cpu": {
+    "format": "/ C {usage}% ",
+    "on-click": "alacritty -e htop"
+  },
+  // Memory
+  "memory": {
+    "format": "/ M {}% ",
+    "on-click": "alacritty -e htop"
+  },
+  // Harddisc space used
+  "disk": {
+    "interval": 30,
+    "format": " {percentage_used}% ",
+    "path": "/",
+    "on-click": "kitty -e htop"
+  },
+  // Network
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "   {signalStrength}%",
+    "format-ethernet": "  {ipaddr}",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": " {ifname} via {gwaddri}",
+    "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+  // Battery
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}   {capacity}%",
+    "format-charging": "  {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-alt": "{icon}  {time}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ]
+  },
+  // Pulseaudio
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        " ",
+        " "
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  // Spotify
+  "custom/spotify": {
+    "format": "{} ",
+    "max-length": 50,
+    "exec": "/usr/bin/python3 /home/wolf/dotfiles/scripts/mediaplayer.py --player spotify",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "exec-if": "pgrep spotfiy"
+  },
+  // Bluetooth
+  "bluetooth": {
+    "format-disabled": "",
+    "format-off": "",
+    "interval": 30,
+    "on-click": "blueman-manager"
+  },
+  // Other
+  "user": {
+    "format": "{user}",
+    "interval": 60,
+    "icon": false,
+  }
+}

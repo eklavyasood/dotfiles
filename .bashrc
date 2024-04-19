@@ -22,6 +22,8 @@ alias rw='~/dotfiles/waybar/reload.sh'
 alias winclass="xprop | grep 'CLASS'"
 alias dot="cd ~/dotfiles"
 alias repo="cd ~/Documents/git-repos/"
+alias wiki="wiki-tui"
+alias ani="ani-cli"
 
 # -----------------------------------------------------
 # Window Managers
@@ -40,6 +42,7 @@ alias gp="git push"
 alias gpl="git pull"
 alias gst="git stash"
 alias gsp="git stash; git pull"
+alias gsw="git switch"
 alias gcheck="git checkout"
 
 # -----------------------------------------------------
@@ -92,6 +95,9 @@ alias res2='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120'
 
 export PATH="/usr/lib/ccache/bin/:$PATH"
 export PATH="/home/wolf/.spicetify/:$PATH"
+export PATH="/home/wolf/.config/emacs/bin/:$PATH"
+
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # -----------------------------------------------------
 # START STARSHIP

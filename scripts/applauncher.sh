@@ -7,4 +7,4 @@
 #         |_|   |_|
 # -----------------------------------------------------
 
-rofi -show drun
+rofi -show drun -config ~/dotfiles/.config/rofi/config.rasi

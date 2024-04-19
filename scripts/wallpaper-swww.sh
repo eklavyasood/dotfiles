@@ -10,7 +10,7 @@
 # -----------------------------------------------------
 # Select wallpaper
 # -----------------------------------------------------
-selected=$(ls -1 ~/hypr-wallpapers | rofi -dmenu -config ~/dotfiles/rofi/config-wallpaper.rasi -p "Wallpapers")
+selected=$(ls -1 ~/hypr-wallpapers | rofi -dmenu -config ~/dotfiles/.config/rofi/config-wallpaper.rasi -p "Wallpapers")
 
 if [ "$selected" ]; then
 
@@ -42,7 +42,7 @@ if [ "$selected" ]; then
 		--transition-duration=0.7 \
 		--transition-pos "$(hyprctl cursorpos)"
 
-	~/dotfiles/waybar/launch.sh
+	~/dotfiles/config/waybar/launch.sh
 	sleep 1
 
 	# -----------------------------------------------------
