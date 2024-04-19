@@ -1,14 +1,15 @@
-#+title: hypr-dotfiles
-#+author: wolfinthedepths
+#+title: dotfiles
+#+author: Eklavya Sood
 
-* hyprland dotfiles
+* dotfiles
 
-hyprland setup for the wayland bling
+all my dotfiles, now managed by GNU Stow
 
 ** applications
 - [[https://github.com/alacritty/alacritty][alacritty]]
 - [[https://github.com/dunst-project/dunst][dunst]]
 - [[https://github.com/hyprwm/Hyprland][hyprland]]
+- [[https://github.com/kovidgoyal/kitty][kitty]]
 - [[https://github.com/neovim/neovim][neovim]]
 - [[https://github.com/davatorium/rofi][rofi]]
 - [[https://github.com/starship/starship][starship]]
@@ -29,5 +30,7 @@ hyprland setup for the wayland bling
 [[./screenshots/screenshot-20231017-232328.png]]
 
 ** note for running script
-- clone the repo to ~/ and rename the directory to 'dotfiles'
-- remember to restore packages from desktop to preinstall them to the target system
+- clone the repo to ~/
+- cd ~/dotfiles
+- run `stow .`
+- voila!
