@@ -1,0 +1,1 @@
+../.config/hypr/scripts/restart-hypridle.sh

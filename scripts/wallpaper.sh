@@ -8,13 +8,13 @@
 # -----------------------------------------------------
 
 # Select wallpaper
-selected=$(ls -1 ~/wallpaper | grep "jpg" | rofi -dmenu -config ~/dotfiles/rofi/config-wallpaper.rasi -p "Wallpapers")
+selected=$(ls -1 ~/hypr-wallpapers | rofi -dmenu -config ~/dotfiles/.config/rofi/config-wallpaper.rasi -p "Wallpapers")
 
 if [ "$selected" ]; then
 
 	echo "Changing theme..."
 	# Update wallpaper with pywal
-	wal -q -i ~/wallpaper/$selected
+	wal -q -i ~/hypr-wallpapers/$selected
 
 	# Wait for 1 sec
 	sleep 1
@@ -25,12 +25,12 @@ if [ "$selected" ]; then
 	# Get new theme
 	source "$HOME/.cache/wal/colors.sh"
 
-	newwall=$(echo $wallpaper | sed "s|$HOME/wallpaper/||g")
+	newwall=$(echo $wallpaper | sed "s|$HOME/hypr-wallpapers/||g")
 
 	# -----------------------------------------------------
 	# Copy selected wallpaper into .cache folder
 	# -----------------------------------------------------
-	cp $wallpaper ~/.cache/current_wallpaper.jpg
+	cp $wallpaper ~/.cache/current_wallpaper.png
 
 	sleep 1
 

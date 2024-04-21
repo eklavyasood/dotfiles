@@ -1,0 +1,87 @@
+// __        __          _                 
+// \ \      / /_ _ _   _| |__   __ _ _ __  
+//  \ \ /\ / / _` | | | | '_ \ / _` | '__| 
+//   \ V  V / (_| | |_| | |_) | (_| | |    
+//    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    
+//                 |___/                   
+//  
+// 
+// ----------------------------------------------------- 
+//
+{
+    // General Settings
+
+    // Position TOP
+    "layer": "top",
+    "margin-top": 14,
+    "margin-bottom": 0,
+    "layer": "top",
+    "margin-left": 0,
+    "margin-right": 0,    
+    "spacing": 0,
+
+    // Load Modules
+    "include": ["~/dotfiles/.config/waybar/modules.json"],
+
+    // Position BOTTOM
+    // "position": "bottom",
+    // "margin-top": 0,
+    // "margin-bottom": 14,
+    
+    "layer": "top",
+    "height": 16,
+    "margin-left": 0,
+    "margin-right": 0,    
+    "spacing": 0,
+
+    // Modules Left
+    "modules-left": [
+        "group/settings",
+        "wlr/taskbar",
+        "group/quicklinks",
+        "hyprland/window",
+        "custom/spotify"
+    //    "custom/appmenu",
+    //    "wlr/taskbar",
+    ],
+
+    // Modules Center
+    "modules-center": [
+        "hyprland/workspaces",
+    ],
+
+    // Modules Right    
+    "modules-right": [
+        "custom/updates",
+        "pulseaudio",
+        "bluetooth",
+        "battery",
+        "network",
+        "group/hardware",
+    //   "custom/cliphist",
+        "idle_inhibitor",
+        "tray",
+        "custom/exit",
+    //  "custom/exit",
+        "clock",
+    ],
+
+    // Group Quicklinks
+    "group/quicklinks": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/filemanager",
+            "custom/chatgpt",
+         ]
+    },
+
+    // Group Hardware
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "disk",
+            "cpu",
+            "memory"
+        ]
+    }
+}

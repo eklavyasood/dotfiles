@@ -137,24 +137,29 @@ alias gsp="git stash; git pull"
 alias gsw="git switch"
 alias gcheck="git checkout"
 
-# -----------------------------------------------------
-# SCRIPTS
-# -----------------------------------------------------
+# # -----------------------------------------------------
+# # SCRIPTS
+# # -----------------------------------------------------
 
 alias wallp='~/dotfiles/scripts/updatewal.sh'
 alias gr='python ~/dotfiles/scripts/growthrate.py'
 alias ascii='~/dotfiles/scripts/figlet.sh'
 
-# -----------------------------------------------------
-# FUZZY FINDER
-# -----------------------------------------------------
+# # -----------------------------------------------------
+# # FUZZY FINDER
+# # -----------------------------------------------------
 
 alias vif='nvim $(fzf)'
 
-alias cd='z'
+# # -----------------------------------------------------
+# # Zoxide
+# # -----------------------------------------------------
 
+alias cd='z'
 
 echo "\n"
 pfetch
+
+(cat ~/.cache/wal/sequences &)
 
 eval "$(zoxide init zsh)"

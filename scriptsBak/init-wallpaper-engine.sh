@@ -1,0 +1,1 @@
+../.config/hypr/scripts/init-wallpaper-engine.sh

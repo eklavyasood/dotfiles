@@ -62,6 +62,16 @@
     },
     "separate-outputs": true,
   },
+  // ML4W Welcome App
+  "custom/ml4w-welcome": {
+    "on-click": "~/dotfiles/apps/ML4W_Welcome-x86_64.AppImage",
+    "format": " ",
+    "tooltip": false
+  },
+  // Empty
+  "custom/empty": {
+    "format": ""
+  },
   // Cliphist
   "custom/cliphist": {
     "format": "",
@@ -84,14 +94,38 @@
   // Wallpaper
   "custom/wallpaper": {
     "format": "",
-    "on-click-right": "~/dotfiles/scripts/wallpaper-swww.sh",
-    "on-click": "~/dotfiles/scripts/updatewal-swww.sh",
+    "on-click-right": "~/dotfiles/scripts/wallpaper.sh select",
+    "on-click": "~/dotfiles/scripts/wallpaper.sh",
+    "tooltip": false
+  },
+  // Waybar Themes
+  "custom/waybarthemes": {
+    "format": "",
+    "on-click": "~/dotfiles/.config/waybar/themeswitcher.sh",
+    "tooltip": false
+  },
+  // Settings
+  "custom/settings": {
+    "format": "",
+    "on-click": "~/dotfiles/apps/ML4W_Dotfiles_Settings-x86_64.AppImage",
+    "tooltip": false
+  },
+  // Keybindings
+  "custom/keybindings": {
+    "format": "",
+    "on-click": "~/dotfiles/scripts/keybindings.sh",
     "tooltip": false
   },
   // Filemanager Launcher
   "custom/filemanager": {
     "format": "",
     "on-click": "~/dotfiles/scripts/filemanager.sh",
+    "tooltip": false
+  },
+  // Browser Launcher
+  "custom/browser": {
+    "format": "",
+    "on-click": "~/dotfiles/.settings/browser.sh",
     "tooltip": false
   },
   // ChatGPT Launcher
@@ -114,8 +148,18 @@
   },
   // Rofi Application Launcher
   "custom/appmenu": {
+    // START APPS LABEL
     "format": "Apps",
-    "on-click": "~/dotfiles/scripts/applauncher.sh",
+    // END APPS LABEL
+    "on-click": "sleep 0.2;rofi -show drun -replace",
+    "on-click-right": "~/dotfiles/scripts/keybindings.sh",
+    "tooltip": false
+  },
+  // Rofi Application Launcher
+  "custom/appmenuicon": {
+    "format": "",
+    "on-click": "rofi -show drun -replace",
+    "on-click-right": "~/dotfiles/scripts/keybindings.sh",
     "tooltip": false
   },
   // Power Menu
@@ -141,19 +185,25 @@
   },
   // Clock
   "clock": {
+    "format": "{:%H:%M - %Od.%Om.%y}",
     "timezone": "Asia/Kolkata",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%d-%m-%Y}"
   },
+  // System
+  "custom/system": {
+    "format": "",
+    "tooltip": false
+  },
   // CPU
   "cpu": {
     "format": "/ C {usage}% ",
-    "on-click": "alacritty -e htop"
+    "on-click": "kitty -e htop"
   },
   // Memory
   "memory": {
     "format": "/ M {}% ",
-    "on-click": "alacritty -e htop"
+    "on-click": "kitty -e htop"
   },
   // Harddisc space used
   "disk": {
@@ -161,6 +211,45 @@
     "format": " {percentage_used}% ",
     "path": "/",
     "on-click": "kitty -e htop"
+  },
+  "hyprland/language": {
+    "format": "/ K {short}"
+  },
+  // Group Hardware
+  "group/hardware": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "not-memory",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/system",
+      "disk",
+      "cpu",
+      "memory",
+      "hyprland/language"
+    ]
+  },
+  // Group Settings
+  "group/settings": {
+    "orientation": "horizontal",
+    "modules": [
+      // START CHATGPT TOOGLE
+      "custom/chatgpt",
+      // END CHATGPT TOOGLE
+      "custom/settings",
+      "custom/waybarthemes",
+      "custom/wallpaper"
+    ]
+  },
+  // Group Quicklinks
+  "group/quicklinks": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/browser",
+      "custom/filemanager",
+    ]
   },
   // Network
   "network": {
@@ -172,7 +261,8 @@
     "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
     "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
     "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50
+    "max-length": 50,
+    "on-click": "~/dotfiles/.settings/networkmanager.sh"
   },
   // Battery
   "battery": {
@@ -232,15 +322,27 @@
   },
   // Bluetooth
   "bluetooth": {
+    "format": " {status}",
     "format-disabled": "",
     "format-off": "",
     "interval": 30,
-    "on-click": "blueman-manager"
+    "on-click": "blueman-manager",
+    "format-no-controller": ""
   },
   // Other
   "user": {
     "format": "{user}",
     "interval": 60,
     "icon": false,
+  },
+  // Idle Inhibator
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "tooltip": true,
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    },
+    "on-click-right": "hyprlock"
   }
 }

@@ -1,0 +1,1 @@
+../.config/hypr/scripts/ml4w-welcome-autostart.sh

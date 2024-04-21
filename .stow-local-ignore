@@ -19,8 +19,16 @@ _darcs
 .+~
 \#.*\#
 
+scripts
+scriptsBak
 configs.sh
 packages.txt
 README.org
 screenshots
-scripts
+apps
+login
+uninstall.sh
+update.sh
+
+\.settings
+\.version
