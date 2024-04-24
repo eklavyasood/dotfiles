@@ -6,18 +6,14 @@ return {
 	},
 	config = function()
     local alpha = require("alpha")
-    local dashboard = require("alpha.themes.startify")
+    local dashboard = require("alpha.themes.dashboard")
     alpha.setup(dashboard.config)
 
     dashboard.section.header.val = {
-      "                                                     ",
-      "  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
-      "  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
-      "  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
-      "  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
-      "  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
-      "  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
-      "                                                     ",
+      [[  ／|_       ]],
+    [[ (o o /      ]],
+    [[  |.   ~.    ]],
+    [[  じしf_,)ノ ]],
     }
 
     alpha.setup(dashboard.opts)

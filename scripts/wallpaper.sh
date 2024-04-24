@@ -20,7 +20,7 @@ if [ "$selected" ]; then
 	sleep 1
 
 	# Reload qtile to color bar
-	qtile cmd-obj -o cmd -f reload_config
+	# qtile cmd-obj -o cmd -f reload_config
 
 	# Get new theme
 	source "$HOME/.cache/wal/colors.sh"
