@@ -89,7 +89,7 @@ keys = [
     Key([mod, "shift"], "h", lazy.layout.swap_left()),
     Key([mod, "shift"], "l", lazy.layout.swap_right()),
 
-    Key([mod], "Print", lazy.spawn(home + "/dotfiles/qtile/scripts/screenshot.sh")),
+    Key([mod], "Print", lazy.spawn(home + "/dotfiles/.config/qtile/scripts/screenshot.sh")),
 
     # Size
     Key([mod, "control"], "Down", lazy.layout.shrink(), desc="Grow window to the left"),
@@ -111,14 +111,14 @@ keys = [
     #System
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "control"], "q", lazy.spawn(home + "/dotfiles/qtile/scripts/powermenu.sh"), desc="Open Powermenu"),
+    Key([mod, "control"], "q", lazy.spawn(home + "/dotfiles/.config/qtile/scripts/powermenu.sh"), desc="Open Powermenu"),
 
     # Apps
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod, "control"], "Return", lazy.spawn("rofi -show drun"), desc="Launch Rofi"),
     Key([mod], "b", lazy.spawn("sh " + home + "/dotfiles/.settings/browser.sh"), desc="Launch Browser"),
-    Key([mod, "shift"], "w", lazy.spawn(home + "/dotfiles/qtile/scripts/wallpaper.sh"), desc="Update Theme and Wallpaper"),
-    Key([mod, "control"], "w", lazy.spawn(home + "/dotfiles/qtile/scripts/wallpaper.sh select"), desc="Select Theme and Wallpaper"),
+    Key([mod, "shift"], "w", lazy.spawn(home + "/dotfiles/.config/qtile/scripts/wallpaper.sh"), desc="Update Theme and Wallpaper"),
+    Key([mod, "control"], "w", lazy.spawn(home + "/dotfiles/.config/qtile/scripts/wallpaper.sh select"), desc="Select Theme and Wallpaper"),
 
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl -q s +20%")),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl -q s 20%-"))        
@@ -261,7 +261,7 @@ widget_list = [
         text="  ",
         foreground="000000.6",
         fontsize=18,
-        mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(home + "/dotfiles/qtile/scripts/wallpaper.sh select")},
+        mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(home + "/dotfiles/.config/qtile/scripts/wallpaper.sh select")},
     ),
     widget.GroupBox(
         **decor_left,
@@ -353,7 +353,7 @@ widget_list = [
         padding=5,    
         text=" ",
         fontsize=20,
-        mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(home + "/dotfiles/qtile/scripts/powermenu.sh")},
+        mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(home + "/dotfiles/.config/qtile/scripts/powermenu.sh")},
     ),
 ]
 

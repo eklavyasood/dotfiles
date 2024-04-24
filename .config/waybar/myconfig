@@ -27,7 +27,7 @@
     "spacing": 0,
 
     // Load Modules
-    "include": ["~/dotfiles/waybar/modules.json"],
+    "include": ["~/dotfiles/.config/waybar/modules.json"],
 
     // Modules Left
     "modules-left": [
