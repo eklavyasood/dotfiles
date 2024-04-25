@@ -96,6 +96,7 @@ alias res2='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120'
 export PATH="/usr/lib/ccache/bin/:$PATH"
 export PATH="/home/wolf/.spicetify/:$PATH"
 export PATH="/home/wolf/.config/emacs/bin/:$PATH"
+export BINPATH="$HOME/.local/bin"
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
