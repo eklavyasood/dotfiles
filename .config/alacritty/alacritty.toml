@@ -11,5 +11,3 @@ opacity = 0.4
 [window.padding]
 x = 15
 y = 15
-
-shell = '/bin/zsh'
