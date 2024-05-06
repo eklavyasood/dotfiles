@@ -164,7 +164,7 @@ alias cd='z'
 alias t='tmux'
 
 echo "\n"
-pfetch
+neofetch
 
 (cat ~/.cache/wal/sequences &)
 

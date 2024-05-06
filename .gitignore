@@ -1,3 +1,5 @@
+.emacs.d/elpa
+
 .config/*/.git
 .config/*/*/.git
 .config/*/*/*/.git
