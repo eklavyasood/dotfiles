@@ -117,21 +117,26 @@
    "t" '(:ignore t :which-key "toggles")
    "tt" '(counsel-load-theme :which-key "choose theme")))
 
-(use-package evil
-  :init
-  (setq evil-want-integration t)
-  (setq evil-want-keybinding nil)
-  (setq evil-want-C-u-scroll t)
-  (setq evil-want-C-i-jumpm nil)
-  :hook (evil-mode . rune/evil-hook)
-  :config
-  (evil-mode 1)
-  (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
-  (define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char-and-join)
+(unless (package-installed-p 'evil)
+  (package-install 'evil))
 
-  ;; use visual line motions even outside of visual-line-mode buffers
-  (evil-global-set-key 'motion "j" 'evil-next-visual-line)
-  (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
-
-  (evil-set-initial-state 'messages-buffer-mode 'normal)
-  (evil-set-initial-state 'dashboard-mode 'normal))
+(require 'evil)
+(evil-mode 1)
+; (use-package evil
+;   :init
+;   (setq evil-want-integration t)
+;   (setq evil-want-keybinding nil)
+;   (setq evil-want-C-u-scroll t)
+;   (setq evil-want-C-i-jumpm nil)
+;   :hook (evil-mode . rune/evil-hook)
+;   :config
+;   (evil-mode 1)
+;   (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
+;   (define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char-and-join)
+; 
+;   ;; use visual line motions even outside of visual-line-mode buffers
+;   (evil-global-set-key 'motion "j" 'evil-next-visual-line)
+;   (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
+; 
+;   (evil-set-initial-state 'messages-buffer-mode 'normal)
+;   (evil-set-initial-state 'dashboard-mode 'normal))

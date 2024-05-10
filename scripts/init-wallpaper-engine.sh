@@ -11,7 +11,7 @@ elif [ "$wallpaper_engine" == "hyprpaper" ] ;then
     # hyprpaper
     echo ":: Using hyprpaper"
     sleep 0.5
-    ~/dotfiles/.config/hypr/scripts/wallpaper.sh init
+    ~/dotfiles/scripts/wall.sh init
 else
     echo ":: Wallpaper Engine disabled"
     ~/dotfiles/.config/hypr/scripts/wallpaper.sh init

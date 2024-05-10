@@ -107,4 +107,6 @@ else
   dunstify "Wallpaper procedure complete!!" "with image $newwal" -h int:value:100 -h string:x-dunst-stack-tag:wallpaper
 fi
 
+echo ${wallpaper}
+echo ${current_wallpaper]
 echo "DONE!"
