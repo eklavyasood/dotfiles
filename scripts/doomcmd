@@ -1,0 +1,28 @@
+#!/bin/bash
+# restores the .git directory, runs doom commands, then moves the .git directory back
+
+# check that there's at least one arg
+if [[ "${#}" -lt 1 ]] ;then
+  echo "Please provide a command as argument!" >&2
+  exit 1
+fi
+
+# read command
+COMMAND="${@}"
+
+# restore git directory
+mv /home/wolf/dotfiles/.config/emacs/.gitBak /home/wolf/dotfiles/.config/emacs/.git
+# echo 'moved'
+
+# sleep for 3 seconds after restoring
+sleep 3
+
+~/dotfiles/.config/emacs/bin/doom "${COMMAND}"
+
+# sleep for 3 seconds after moving
+sleep 3
+
+mv /home/wolf/dotfiles/.config/emacs/.git /home/wolf/dotfiles/.config/emacs/.gitBak 
+# echo 'restored'
+
+exit 0
