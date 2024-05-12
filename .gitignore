@@ -1,5 +1,6 @@
-.emacs.d/elpa
+.emacs.d.bak/
 
+.config/emacs/.git
 .config/*/.git
 .config/*/*/.git
 .config/*/*/*/.git
