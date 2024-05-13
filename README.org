@@ -30,8 +30,11 @@ all my dotfiles, now managed by GNU Stow
 [[./screenshots/screenshot-20231017-232316.png]]
 [[./screenshots/screenshot-20231017-232328.png]]
 
-** note for running script
-- clone the repo to ~/
-- cd ~/dotfiles
-- run `stow .`
-- voila!
+** installation
+
+#+begin_src bash
+cd ~
+git clone https://github.com/eklavyasood/dotfiles
+cd dotfiles
+stow .
+#+end_src
