@@ -94,7 +94,9 @@ alias res2='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120'
 export PATH="/usr/lib/ccache/bin/:$PATH"
 export PATH="/home/wolf/.spicetify/:$PATH"
 export PATH="/home/wolf/.config/emacs/bin/:$PATH"
+export PATH="$HOME/.local/bin"
 export BINPATH="$HOME/.local/bin"
+export PATH="$PATH:/home/wolf/bin:/usr/local/bin:/home/wolf/.local/bin/:/home/wolf/.zplug/bin/:/home/wolf/.config/emacs/bin/:/home/wolf/.spicetify/:/usr/lib/ccache/bin/:/home/wolf/.local/bin/:/home/wolf/.zplug/bin/:/home/wolf/.config/emacs/bin/:/home/wolf/.spicetify/:/usr/lib/ccache/bin/:/home/wolf/.local/bin/:/home/wolf/.zplug/bin/:/home/wolf/.config/emacs/bin/:/home/wolf/.spicetify/:/usr/lib/ccache/bin/:/home/wolf/.local/bin/:/home/wolf/.zplug/bin/:/home/wolf/.config/emacs/bin/:/home/wolf/.spicetify/:/usr/lib/ccache/bin/:/sbin:/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
