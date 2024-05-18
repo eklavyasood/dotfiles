@@ -94,8 +94,8 @@
   // Wallpaper
   "custom/wallpaper": {
     "format": "",
-    "on-click-right": "~/dotfiles/scripts/wallpaper.sh select",
-    "on-click": "~/dotfiles/scripts/wallpaper.sh",
+    "on-click-right": "~/dotfiles/scripts/wall.sh select",
+    "on-click": "~/dotfiles/scripts/wall.sh",
     "tooltip": false
   },
   // Waybar Themes
