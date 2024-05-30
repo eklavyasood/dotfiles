@@ -1,0 +1,46 @@
+# script to ease building c programs with -o names
+
+# usage function
+usage() {
+  echo "Usage: build FILE_NAME BINARY_NAME" >&2
+  echo "Build FILE_NAME into a binary named BINARY_NAME" >&2
+  exit 1
+}
+
+# getopts
+while getopts h OPTION ;do
+  case "${OPTION}" in
+    'h')
+      usage
+      ;;
+    *)
+      echo "Invalid option!" >&2
+      exit 1
+      ;;
+  esac
+done
+
+# check whether two arguments were passed or not
+if [[ "${#}" -ne 2 ]] ;then
+  usage
+fi
+
+# figure out the file type of the c/c++ file that has been passed as the first argument
+FILE_TYPE=$( echo $1 | awk -F. '{print $2}' )
+
+# check whether it's a c file or a c++ file, and build based on the result
+if [[ $FILE_TYPE = "cpp" ]] ;then
+  g++ -o $2 $1
+  if [[ "${?}" -ne 0 ]] ;then
+    echo "Builed failed!" >&2
+    exit 1
+  fi
+else
+  gcc -o $2 $1
+  if [[ "${?}" -ne 0 ]] ;then
+    echo "Builed failed!" >&2
+    exit 1
+  fi
+fi
+
+echo "Build done!"
