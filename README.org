@@ -23,7 +23,7 @@ all my dotfiles, now managed by GNU Stow
 
 ** screenshots
 
-[[./screenshots/screenshot-30052024-123427.png]]
+[[./screenshots/screenshot_30052024_123427.png]]
 [[./screenshots/screenshot.png]]
 [[./screenshots/screenshot-20231017-232236.png]]
 [[./screenshots/screenshot-20231017-232255.png]]
