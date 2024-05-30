@@ -23,13 +23,13 @@ all my dotfiles, now managed by GNU Stow
 
 ** screenshots
 
+[[./screenshots/screenshot-30052024-123427.png]]
 [[./screenshots/screenshot.png]]
 [[./screenshots/screenshot-20231017-232236.png]]
 [[./screenshots/screenshot-20231017-232255.png]]
 [[./screenshots/screenshot-20231017-232306.png]]
 [[./screenshots/screenshot-20231017-232316.png]]
 [[./screenshots/screenshot-20231017-232328.png]]
-[[./screenshots/screenshot-30052024-123427.png]]
 
 ** installation
 
