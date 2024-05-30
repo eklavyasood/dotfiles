@@ -1,8 +1,10 @@
 .emacs.d.bak/
 
 .config/emacs/.git
+.config/tmux/plugins/*
 .config/*/.git
 .config/*/*/.git
 .config/*/*/*/.git
 .config/*/*/*/*/.git
 .config/*/*/*/*/*/.git
+.config/*/*/*/*/*/*/.git
