@@ -1,17 +1,32 @@
-# script to ease building c programs with -o names
+#!/usr/bin/env bash
+# script to ease building c or c++ programs with -o names
 
-# usage function
+# global flags
+RUN_MODE="false"
+
+# functions
 usage() {
+  echo "Written by wolfinthedepths because I'm lazy and don't want to remember what files I'm compiling" >&2
   echo "Usage: build FILE_NAME BINARY_NAME" >&2
   echo "Build FILE_NAME into a binary named BINARY_NAME" >&2
   exit 1
 }
 
+fail() {
+  if [[ "${?}" -ne 0 ]] ;then
+    echo "Builed failed!" >&2
+    exit 1
+  fi
+}
+
 # getopts
-while getopts h OPTION ;do
+while getopts hr OPTION ;do
   case "${OPTION}" in
     'h')
       usage
+      ;;
+    'r')
+      RUN_MODE="true"
       ;;
     *)
       echo "Invalid option!" >&2
@@ -19,6 +34,9 @@ while getopts h OPTION ;do
       ;;
   esac
 done
+
+# shift backwards to get rid of GETOPTS args
+shift $(( $OPTIND - 1 ))
 
 # check whether two arguments were passed or not
 if [[ "${#}" -ne 2 ]] ;then
@@ -31,16 +49,20 @@ FILE_TYPE=$( echo $1 | awk -F. '{print $2}' )
 # check whether it's a c file or a c++ file, and build based on the result
 if [[ $FILE_TYPE = "cpp" ]] ;then
   g++ -o $2 $1
-  if [[ "${?}" -ne 0 ]] ;then
-    echo "Builed failed!" >&2
-    exit 1
-  fi
+  fail
 else
   gcc -o $2 $1
-  if [[ "${?}" -ne 0 ]] ;then
-    echo "Builed failed!" >&2
-    exit 1
-  fi
+  fail
 fi
 
-echo "Build done!"
+if [[ "${RUN_MODE}" = "true" ]] ;then
+  echo "Build done!"
+  echo "Executing binary now."
+  echo
+  sleep 1
+  ./${2}
+  exit 0
+else
+  echo "Build done!"
+  exit 0
+fi
