@@ -7,8 +7,10 @@ RUN_MODE="false"
 # functions
 usage() {
   echo "Written by wolfinthedepths because I'm lazy and don't want to remember what files I'm compiling" >&2
-  echo "Usage: build FILE_NAME BINARY_NAME" >&2
+  echo "Usage: build [-hr] FILE_NAME BINARY_NAME" >&2
   echo "Build FILE_NAME into a binary named BINARY_NAME" >&2
+  echo "  -h  Print this help block" >&2
+  echo "  -r  Run the built binary after build finishes successfully" >&2
   exit 1
 }
 
@@ -18,6 +20,21 @@ fail() {
     exit 1
   fi
 }
+
+ascii() {
+  echo
+  echo -e '_______             __  __        __         ______                                     __             __                __  '
+  echo -e '|       \           |  \|  \      |  \       /      \                                   |  \           |  \              |  \'
+  echo -e '| $$$$$$$\ __    __  \$$| $$  ____| $$      |  $$$$$$\  ______   ______ ____    ______  | $$  ______  _| $$_     ______  | $$'
+  echo -e '| $$__/ $$|  \  |  \|  \| $$ /      $$      | $$   \$$ /      \ |      \    \  /      \ | $$ /      \|   $$ \   /      \ | $$'
+  echo -e '| $$    $$| $$  | $$| $$| $$|  $$$$$$$      | $$      |  $$$$$$\| $$$$$$\$$$$\|  $$$$$$\| $$|  $$$$$$\\$$$$$$  |  $$$$$$\| $$'
+  echo -e '| $$$$$$$\| $$  | $$| $$| $$| $$  | $$      | $$   __ | $$  | $$| $$ | $$ | $$| $$  | $$| $$| $$    $$ | $$ __ | $$    $$ \$$'
+  echo -e '| $$__/ $$| $$__/ $$| $$| $$| $$__| $$      | $$__/  \| $$__/ $$| $$ | $$ | $$| $$__/ $$| $$| $$$$$$$$ | $$|  \| $$$$$$$$ __ '
+  echo -e '| $$    $$ \$$    $$| $$| $$ \$$    $$       \$$    $$ \$$    $$| $$ | $$ | $$| $$    $$| $$ \$$     \  \$$  $$ \$$     \|  \'
+  echo -e ' \$$$$$$$   \$$$$$$  \$$ \$$  \$$$$$$$        \$$$$$$   \$$$$$$  \$$  \$$  \$$| $$$$$$$  \$$  \$$$$$$$   \$$$$   \$$$$$$$ \$$'
+  echo
+}
+
 
 # getopts
 while getopts hr OPTION ;do
@@ -56,7 +73,7 @@ else
 fi
 
 if [[ "${RUN_MODE}" = "true" ]] ;then
-  echo "Build done!"
+  ascii
   echo "Executing binary now."
   echo
   sleep 1
