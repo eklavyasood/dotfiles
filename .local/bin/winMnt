@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# script to mount windows partition to /mnt/win-wfi
+
+# check superuser perms
+if [[ ${UID} -ne 0 ]]
+then
+  echo "Run the script as root." >&2
+  exit 1 >&2
+fi
+
+sudo mount /dev/nvme0n1p3 /mnt/win-efi 2> /dev/null
+
+if [[ ${?} -ne 0 ]]
+then
+  echo "Error! The Partition is mounted already!" >&2
+  exit 1
+else
+  echo "Success! The partition has been mounted!"
+  exit 0
+fi
