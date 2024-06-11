@@ -45,6 +45,9 @@ zinit cdreplay -q
 
 bindkey '^f' autosuggest-accept
 
+# vi mode, this line needs to be here to preserve zinit history search implementation
+bindkey -v
+
 # history back-forward
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
