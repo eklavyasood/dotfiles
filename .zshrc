@@ -43,10 +43,10 @@ autoload -U compinit && compinit
 
 zinit cdreplay -q
 
-bindkey '^f' autosuggest-accept
-
 # vi mode, this line needs to be here to preserve zinit history search implementation
 bindkey -v
+
+bindkey '^f' autosuggest-accept
 
 # history back-forward
 bindkey '^p' history-search-backward
