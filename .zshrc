@@ -76,7 +76,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'exa $realpath'
 
 # aliases
-alias orphans="sudo pacman -Rs $(pacman -Qdt | awk '{print $1}')"
+# alias orphans="sudo pacman -Rs $(pacman -Qdt | awk '{print $1}')"
 alias nf='neofetch'
 alias pf='pfetch'
 alias ls='exa -alh'

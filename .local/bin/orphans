@@ -1,0 +1,11 @@
+#!/bin/bash
+# clears orphan packages from pacman
+
+# check superuser perms
+if [[ ${UID} -ne 0 ]]
+then
+  echo "Run the script as root." >&2
+  exit 1 >&2
+fi
+
+sudo pacman -Rs "$(pacman -Qdt | awk '{$print $1}')"
