@@ -1,5 +1,6 @@
 .emacs.d.bak/
 
+.config/dwm/.git
 .config/emacs/.git
 .config/tmux/plugins/*
 .config/*/.git

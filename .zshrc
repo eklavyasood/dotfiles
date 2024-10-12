@@ -88,6 +88,7 @@ alias repo="cd ~/Documents/git-repos/"
 alias wiki="wiki-tui"
 alias ani="ani-cli"
 alias cpp="g++"
+alias myscrot="scrot ~/Pictures/Screenshots/%b%d::%H%M%S.png"
 
 # # -----------------------------------------------------
 # # GIT
