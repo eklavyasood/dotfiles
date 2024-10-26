@@ -75,6 +75,8 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'exa $realpath'
 
+alias nixb="sudo nixos-rebuild switch -I /home/wolf/nixos/configuration.nix"
+
 # aliases
 # alias orphans="sudo pacman -Rs $(pacman -Qdt | awk '{print $1}')"
 alias nf='neofetch'
