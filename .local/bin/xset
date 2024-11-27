@@ -1,0 +1,12 @@
+#!/bin/env bash
+
+# script to set X root window, for use with the dwm status bar
+
+timeCMD=$(date | awk '{ print $4 " " $5 " | " $1 " " $2 "/" $3}')
+batteryCMD=$(upower -d | grep 'percentage' | head -1 | awk '{print $2}')
+root="$timeCMD $batteryCMD"
+
+while true; do
+  xsetroot -name "$root"
+  sleep 1
+done

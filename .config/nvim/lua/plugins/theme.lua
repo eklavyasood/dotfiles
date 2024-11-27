@@ -28,7 +28,9 @@
 
 -- oxocarbon
 return {
-  "nyoom-engineering/oxocarbon.nvim"
+  "EdenEast/nightfox.nvim";
+  colorscheme = 'carbonfox';
+  -- "nyoom-engineering/oxocarbon.nvim"
   -- Add in any other configuration; 
   --   event = foo, 
   --   config = bar
